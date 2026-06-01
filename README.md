@@ -1,4 +1,4 @@
-# workspace-icons-vlm-study
+# google-workspace-icons-vlm-study
 
 > Does Google's May 2026 Workspace icon redesign produce more separable representations in vision-language model embedding space?
 
@@ -10,7 +10,6 @@ The quantitative claim under test:
 
 If this holds, this is consistent with Google's stated design intent of making apps "more distinct" — and quantifies it on machine perception rather than human perception.
 
-**Result:** Yes. Across all three tested vision encoders (OpenCLIP, SigLIP, and DINOv2), the new icons showed a statistically significant increase in mean pairwise distance (e.g., OpenCLIP separation increased by ~33%), making them more distinguishable to AI vision models.
 ## What this is not
 
 - Not a claim about computer-use agents.
@@ -81,7 +80,3 @@ n = 8 apps ⇒ 28 pairwise distances per condition per encoder. Small but adequa
 All encoder weights are pinned in `configs/encoders.yaml`. Random seeds are set in `scripts/run_study.py`. A `results/<run>/manifest.json` records git SHA, encoder versions, and icon file hashes.
 
 If you encounter rate limits or access issues downloading models from Hugging Face, create a `.env` file in the root directory with `HF_TOKEN="your_hugging_face_token"`.
-
-## Citation
-
-If this becomes an article, cite as: Subramanian, L. (2026). *Embedding-space separation of Google Workspace icons before and after the May 2026 redesign.* [in prep].
