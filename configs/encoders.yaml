@@ -1,0 +1,35 @@
+# Pinned encoder configurations.
+# Adding an encoder: append here AND register a factory in src/embed.py::build_encoder.
+
+encoders:
+  # - name: openclip_vit_l14
+  #   family: openclip
+  #   model: ViT-L-14
+  #   pretrained: laion2b_s32b_b82k
+  #   image_size: 224
+
+  # - name: siglip_so400m
+  #   family: siglip
+  #   model: google/siglip-so400m-patch14-384
+  #   image_size: 384
+
+  # - name: dinov2_vit_l14
+  #   family: dinov2
+  #   model: facebook/dinov2-large
+  #   image_size: 224
+
+    - name: dinov3_vit_l16
+      family: dinov2
+      model: facebook/dinov3-vitl16-pretrain-lvd1689m
+      image_size: 224
+
+
+# Image preprocessing applied before any encoder-specific transform.
+preprocessing:
+  canvas_size: 384
+  background_rgb: [136, 136, 136]   # neutral gray, see PROJECT.md decision log
+
+# Statistical run
+stats:
+  bootstrap_samples: 10000
+  seed: 42

@@ -1,0 +1,31 @@
+# Icons — trademark-sensitive, not committed
+data/icons_old/*
+data/icons_new/*
+!data/icons_old/.gitkeep
+!data/icons_new/.gitkeep
+
+# Results
+results/*
+!results/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Model caches
+.cache/
+*.pt
+*.safetensors
+
+# OS
+.DS_Store
+Thumbs.db
+.env
